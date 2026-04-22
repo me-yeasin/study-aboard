@@ -24,8 +24,8 @@ export default function Home() {
             className="flex flex-col justify-center items-center w-8 h-8 gap-3"
             aria-label="Open menu"
           >
-            <span className="w-7 h-[1px] bg-white rounded-full" />
-            <span className="w-7 h-[1px] bg-white rounded-full" />
+            <span className="w-7 h-px bg-white rounded-full" />
+            <span className="w-7 h-px bg-white rounded-full" />
           </button>
         </nav>
       </header>
