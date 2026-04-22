@@ -13,6 +13,21 @@ const PhoneIcon = () => (
   </svg>
 );
 
+const CalendarIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="white"
+  >
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+    <line x1="16" y1="2" x2="16" y2="6" stroke="white" strokeWidth="2" strokeLinecap="round" />
+    <line x1="8" y1="2" x2="8" y2="6" stroke="white" strokeWidth="2" strokeLinecap="round" />
+    <line x1="3" y1="10" x2="21" y2="10" stroke="white" strokeWidth="2" />
+  </svg>
+);
+
 export default function Home() {
   return (
     <>
@@ -64,9 +79,9 @@ export default function Home() {
         <h1 className="font-heading text-white text-3xl font-medium text-center mt-10 leading-tight">
           Australia's most trusted education specialist
         </h1>
-        <div className="flex flex-col gap-5 mt-10 max-w-sm px-4">
+        <div className="flex flex-col gap-3 mt-10 max-w-sm px-4">
           <PrimaryButton icon={<PhoneIcon />} label="Request a callback" />
-          <SecondaryButton icon={<PhoneIcon />} label="Request a callback" />
+          <SecondaryButton icon={<CalendarIcon />} label="Free Consultation" />
         </div>
       </section>
     </>
