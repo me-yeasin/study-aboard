@@ -1,26 +1,232 @@
 @import "tailwindcss";
 
+/* ============================================
+   STUDY ABROAD DESIGN SYSTEM
+   Primary: Purple (from hero-background.png)
+   Secondary: Gold (complementary)
+   Tertiary: Teal (split-complementary)
+   Accent: Amber (energy/CTAs)
+   ============================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base backgrounds */
+  --background: #fafafa;
+  --foreground: #1a1a2e;
+  
+  /* Primary: Purple Scale (extracted from hero image #6040a0) */
+  --purple-50: #f5f3ff;
+  --purple-100: #ede9fe;
+  --purple-200: #d4ccff;
+  --purple-300: #bba8ff;
+  --purple-400: #a894ff;
+  --purple-500: #7c5cff;
+  --purple-600: #6b47e3;
+  --purple-700: #5a3bc2;
+  --purple-800: #4a2fa1;
+  --purple-900: #3b237f;
+  --purple-950: #231548;
+  
+  /* Secondary: Gold Scale (complementary to purple) */
+  --gold-50: #fdf9ed;
+  --gold-100: #f9f0d6;
+  --gold-200: #f4e4b5;
+  --gold-300: #e8d17d;
+  --gold-400: #e0c055;
+  --gold-500: #c9a227;
+  --gold-600: #b08a1d;
+  --gold-700: #8f7018;
+  --gold-800: #755a16;
+  --gold-900: #5c4714;
+  --gold-950: #35280b;
+  
+  /* Tertiary: Teal Scale (split-complementary, balance) */
+  --teal-50: #f0fdfa;
+  --teal-100: #ccfbf1;
+  --teal-200: #9ef5e0;
+  --teal-300: #5fc9bd;
+  --teal-400: #3bb4a6;
+  --teal-500: #2a9d8f;
+  --teal-600: #1d8075;
+  --teal-700: #186660;
+  --teal-800: #16524d;
+  --teal-900: #154440;
+  --teal-950: #082c2a;
+  
+  /* Accent: Amber Scale (energy, CTAs) */
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-200: #fde68a;
+  --amber-300: #fcd34d;
+  --amber-400: #fbbf24;
+  --amber-500: #e9c46a;
+  --amber-600: #d97706;
+  --amber-700: #b45309;
+  --amber-800: #92400e;
+  --amber-900: #78350f;
+  --amber-950: #451a03;
+  
+  /* Neutral: Slate Scale */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
 }
 
+/* ============================================
+   TAILWIND V4 THEME CONFIGURATION
+   ============================================ */
+
 @theme inline {
+  /* Font families */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  
+  /* Base colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
+  /* Primary: Purple */
+  --color-primary-50: var(--purple-50);
+  --color-primary-100: var(--purple-100);
+  --color-primary-200: var(--purple-200);
+  --color-primary-300: var(--purple-300);
+  --color-primary-400: var(--purple-400);
+  --color-primary-500: var(--purple-500);
+  --color-primary-600: var(--purple-600);
+  --color-primary-700: var(--purple-700);
+  --color-primary-800: var(--purple-800);
+  --color-primary-900: var(--purple-900);
+  --color-primary-950: var(--purple-950);
+  
+  /* Secondary: Gold */
+  --color-secondary-50: var(--gold-50);
+  --color-secondary-100: var(--gold-100);
+  --color-secondary-200: var(--gold-200);
+  --color-secondary-300: var(--gold-300);
+  --color-secondary-400: var(--gold-400);
+  --color-secondary-500: var(--gold-500);
+  --color-secondary-600: var(--gold-600);
+  --color-secondary-700: var(--gold-700);
+  --color-secondary-800: var(--gold-800);
+  --color-secondary-900: var(--gold-900);
+  --color-secondary-950: var(--gold-950);
+  
+  /* Tertiary: Teal */
+  --color-tertiary-50: var(--teal-50);
+  --color-tertiary-100: var(--teal-100);
+  --color-tertiary-200: var(--teal-200);
+  --color-tertiary-300: var(--teal-300);
+  --color-tertiary-400: var(--teal-400);
+  --color-tertiary-500: var(--teal-500);
+  --color-tertiary-600: var(--teal-600);
+  --color-tertiary-700: var(--teal-700);
+  --color-tertiary-800: var(--teal-800);
+  --color-tertiary-900: var(--teal-900);
+  --color-tertiary-950: var(--teal-950);
+  
+  /* Accent: Amber */
+  --color-accent-50: var(--amber-50);
+  --color-accent-100: var(--amber-100);
+  --color-accent-200: var(--amber-200);
+  --color-accent-300: var(--amber-300);
+  --color-accent-400: var(--amber-400);
+  --color-accent-500: var(--amber-500);
+  --color-accent-600: var(--amber-600);
+  --color-accent-700: var(--amber-700);
+  --color-accent-800: var(--amber-800);
+  --color-accent-900: var(--amber-900);
+  --color-accent-950: var(--amber-950);
+  
+  /* Neutral: Slate */
+  --color-neutral-50: var(--slate-50);
+  --color-neutral-100: var(--slate-100);
+  --color-neutral-200: var(--slate-200);
+  --color-neutral-300: var(--slate-300);
+  --color-neutral-400: var(--slate-400);
+  --color-neutral-500: var(--slate-500);
+  --color-neutral-600: var(--slate-600);
+  --color-neutral-700: var(--slate-700);
+  --color-neutral-800: var(--slate-800);
+  --color-neutral-900: var(--slate-900);
+  --color-neutral-950: var(--slate-950);
 }
+
+/* ============================================
+   DARK MODE OVERRIDES
+   ============================================ */
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a;
+    --foreground: #f8fafc;
   }
 }
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Primary Button States */
+.btn-primary {
+  background-color: var(--purple-500);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--purple-400);
+}
+
+.btn-primary:active {
+  background-color: var(--purple-600);
+  transform: scale(0.98);
+}
+
+/* Secondary (Gold) Button States */
+.btn-secondary {
+  background-color: var(--gold-500);
+  color: var(--slate-900);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--gold-400);
+}
+
+.btn-secondary:active {
+  background-color: var(--gold-600);
+  transform: scale(0.98);
+}
+
+/* Tertiary (Teal) Button States */
+.btn-tertiary {
+  background-color: var(--teal-500);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.btn-tertiary:hover {
+  background-color: var(--teal-400);
+}
+
+.btn-tertiary:active {
+  background-color: var(--teal-600);
+  transform: scale(0.98);
 }
