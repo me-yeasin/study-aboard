@@ -84,9 +84,52 @@
    ============================================ */
 
 @theme inline {
-  /* Font families */
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  /* ============================================
+     RESPONSIVE BREAKPOINTS (Mobile-First)
+     Based on 2025 device standards & Tailwind v4
+     ============================================ */
+  
+  /* Mobile landscape / Small tablets (640px) */
+  --breakpoint-sm: 40rem;
+  
+  /* Tablets portrait (768px) - iPad Mini, standard tablets */
+  --breakpoint-md: 48rem;
+  
+  /* Tablets landscape / Small laptops (1024px) */
+  --breakpoint-lg: 64rem;
+  
+  /* Laptops / Small desktops (1280px) */
+  --breakpoint-xl: 80rem;
+  
+  /* Large desktops / High-res screens (1536px) */
+  --breakpoint-2xl: 96rem;
+  
+  /* ============================================
+     FONT FAMILIES
+     Body: Inter, Heading: Playfair Display, Display: Poppins
+     ============================================ */
+  
+  /* Body font - Inter: Clean, modern, highly readable */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  
+  /* Heading font - Playfair Display: Elegant serif */
+  --font-heading: var(--font-playfair), ui-serif, Georgia, Cambria, serif;
+  
+  /* Display font - Poppins: Geometric, friendly */
+  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  
+  /* Monospace font */
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", monospace;
+  
+  /* ============================================
+     TAILWIND FONT UTILITIES
+     ============================================ */
+  
+  /* Font family utilities (e.g., font-sans, font-heading, font-display) */
+  --font-family-sans: var(--font-sans);
+  --font-family-heading: var(--font-heading);
+  --font-family-display: var(--font-display);
+  --font-family-mono: var(--font-mono);
   
   /* Base colors */
   --color-background: var(--background);
@@ -229,4 +272,23 @@ body {
 .btn-tertiary:active {
   background-color: var(--teal-600);
   transform: scale(0.98);
+}
+
+/* ============================================
+   FONT UTILITY CLASSES
+   ============================================ */
+
+/* Heading font - Playfair Display for elegant headings */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Display font - Poppins for hero text and display elements */
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Body font - Inter (default, but explicit class available) */
+.font-body {
+  font-family: var(--font-sans);
 }
