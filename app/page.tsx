@@ -1,4 +1,5 @@
 import PrimaryButton from "./components/ui/primary-button";
+import SecondaryButton from "./components/ui/secondary-button";
 
 const PhoneIcon = () => (
   <svg
@@ -63,9 +64,9 @@ export default function Home() {
         <h1 className="font-heading text-white text-3xl font-medium text-center mt-10 leading-tight">
           Australia's most trusted education specialist
         </h1>
-        <div className="flex flex-col gap-3 mt-10 max-w-sm px-4">
+        <div className="flex flex-col gap-5 mt-10 max-w-sm px-4">
           <PrimaryButton icon={<PhoneIcon />} label="Request a callback" />
-          <PrimaryButton icon={<PhoneIcon />} label="Request a callback" />
+          <SecondaryButton icon={<PhoneIcon />} label="Request a callback" />
         </div>
       </section>
     </>
