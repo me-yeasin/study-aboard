@@ -72,6 +72,22 @@ export default function AboutUsSection() {
         <div className="flex justify-center mt-8">
           <PrimaryButton icon={<PhoneIcon />} label="Request a Call Back" variant="gradient" />
         </div>
+
+        {/* Stats Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+          <div className="bg-white rounded-xl shadow-sm p-6 flex flex-col items-center justify-center text-center">
+            <p className="font-heading text-3xl font-bold text-primary-700">120+</p>
+            <p className="font-sans text-sm text-gray-600 mt-2">Partner Institutions</p>
+          </div>
+          <div className="bg-white rounded-xl shadow-sm p-6 flex flex-col items-center justify-center text-center">
+            <p className="font-heading text-3xl font-bold text-primary-700">30+</p>
+            <p className="font-sans text-sm text-gray-600 mt-2">Years of Experience</p>
+          </div>
+          <div className="bg-white rounded-xl shadow-sm p-6 flex flex-col items-center justify-center text-center">
+            <p className="font-heading text-3xl font-bold text-primary-700">50K</p>
+            <p className="font-sans text-sm text-gray-600 mt-2">Students Assisted</p>
+          </div>
+        </div>
       </div>
     </section>
   );
