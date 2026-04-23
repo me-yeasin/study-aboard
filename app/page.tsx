@@ -102,69 +102,63 @@ export default function Home() {
         />
         <CategorySlider
           sectionNumber="02"
-          headerIcon="/icons/study-icon.png"
-          title="Work"
-          subtitle="I need help with my work plan"
+          headerIcon="/icons/visa-issue-icon.png"
+          title="Visa Issues"
+          subtitle="I have problem with my visa"
           buttonText="View All"
           onButtonClick={() => console.log("Work View All clicked")}
           cards={[
             {
-              icon: "/icons/city-icon.png",
-              prefix: "I am a",
-              keyword: "tourist",
-              suffix: "working holiday visa.",
+              icon: "/icons/expire-icon.png",
+              prefix: "My current visa will",
+              keyword: "Expire Soon",
+              suffix: "",
             },
             {
-              icon: "/icons/student-australia-icon.png",
-              prefix: "I am a",
-              keyword: "student",
-              suffix: "in Australia.",
+              icon: "/icons/problems.png",
+              prefix: "I have",
+              keyword: "Problems",
+              suffix: "with my visa.",
             },
             {
-              icon: "/icons/overseas-icon.png",
-              prefix: "I am a",
-              keyword: "student",
-              suffix: "currently overseas.",
-            },
-            {
-              icon: "/icons/high-school-australia-icon.png",
-              prefix: "I am a",
-              keyword: "high school student",
-              suffix: "in Australia.",
-            },
+              icon: "/icons/report-icon.png",
+              prefix: "I am being",
+              keyword: "Reported",
+              suffix: "to the Immigration Department.",
+            }
           ]}
         />
         <CategorySlider
-          sectionNumber="02"
-          headerIcon="/icons/study-icon.png"
-          title="Work"
-          subtitle="I need help with my work plan"
+          sectionNumber="03"
+          headerIcon="/icons/migration-icon.png"
+          title="Migration & Visa"
+          subtitle="I have question about migration and visa"
           buttonText="View All"
           onButtonClick={() => console.log("Work View All clicked")}
           cards={[
             {
-              icon: "/icons/city-icon.png",
-              prefix: "I am a",
-              keyword: "tourist",
-              suffix: "working holiday visa.",
+              icon: "/icons/resident-icon.png",
+              prefix: "Temporary & Parmanent",
+              keyword: "Residency",
+              suffix: "",
             },
             {
-              icon: "/icons/student-australia-icon.png",
-              prefix: "I am a",
-              keyword: "student",
-              suffix: "in Australia.",
+              icon: "/icons/sponsership-icon.png",
+              prefix: "Employer",
+              keyword: "Sponsorship",
+              suffix: "",
             },
             {
-              icon: "/icons/overseas-icon.png",
-              prefix: "I am a",
-              keyword: "student",
-              suffix: "currently overseas.",
+              icon: "/icons/family-visa-icon.png",
+              prefix: "Partner &",
+              keyword: "Family Visa",
+              suffix: "",
             },
             {
-              icon: "/icons/high-school-australia-icon.png",
-              prefix: "I am a",
-              keyword: "high school student",
-              suffix: "in Australia.",
+              icon: "/icons/invesment-icon.png",
+              prefix: "Business",
+              keyword: "Investment Visa",
+              suffix: "",
             },
           ]}
         />
