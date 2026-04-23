@@ -24,7 +24,7 @@ const MIGRATION_CARDS = [
 
 export default function ServicesSection() {
   return (
-    <section className="relative -mt-54 z-20 px-4 overflow-visible">
+    <section className="relative -mt-54 [@media(min-height:667px)]:-mt-40 [@media(min-height:812px)]:-mt-80 [@media(min-height:915px)]:-mt-98  z-20 px-4 overflow-visible">
       {/* Decorative Background Circles */}
       <div className="absolute inset-0 overflow-visible pointer-events-none">
         <div className="absolute -left-20 top-0 w-48 h-48 rounded-full bg-primary-500/20 blur-2xl" />

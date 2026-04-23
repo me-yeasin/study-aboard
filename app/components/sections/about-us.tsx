@@ -1,0 +1,78 @@
+"use client";
+
+import PrimaryButton from "../ui/primary-button";
+import { PhoneIcon } from "../ui/icons";
+
+export default function AboutUsSection() {
+  return (
+    <section className="w-full mt-12">
+      {/* Full-width GIF - no padding */}
+      <div className="w-full overflow-hidden">
+        <img
+          src="/gifs/student-abroad.gif"
+          alt="Student abroad"
+          className="w-full h-auto"
+        />
+      </div>
+
+      {/* Content area with padding */}
+      <div className="px-4 mt-6">
+        {/* Label */}
+        <span className="font-sans text-xs font-medium text-primary-800 uppercase tracking-wide">
+          About Us
+        </span>
+
+        {/* Title */}
+        <h2 className="font-heading text-2xl font-medium text-gray-900 mt-2 leading-tight">
+          The Most Recommended Education and Migration Expert - ACIC
+        </h2>
+
+        {/* Subtitle */}
+        <p className="font-sans text-sm text-gray-500 mt-3 leading-relaxed">
+          ACIC is an industry-leading education consulting firm that has specialized in Australian education since its establishment in 1998. ACIC has helped over 90 international students from more than 40 countries study in Australia, with many also successfully obtaining work and residency.
+        </p>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-2 gap-4 mt-6">
+          <div className="flex items-start gap-2">
+            <div className="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center shrink-0 mt-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-primary-600">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </div>
+            <span className="font-sans text-xs text-gray-700">Trusted Guidance Since 1988</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <div className="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center shrink-0 mt-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-primary-600">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </div>
+            <span className="font-sans text-xs text-gray-700">Partnered with Leading Institutions</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <div className="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center shrink-0 mt-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-primary-600">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </div>
+            <span className="font-sans text-xs text-gray-700">Comprehensive Support Services</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <div className="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center shrink-0 mt-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-primary-600">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </div>
+            <span className="font-sans text-xs text-gray-700">Global Presence, Local Expertise</span>
+          </div>
+        </div>
+
+        {/* CTA Button */}
+        <div className="flex justify-center mt-8">
+          <PrimaryButton icon={<PhoneIcon />} label="Request a Call Back" variant="gradient" />
+        </div>
+      </div>
+    </section>
+  );
+}

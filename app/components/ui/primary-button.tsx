@@ -5,9 +5,10 @@ import { useState } from "react";
 interface PrimaryButtonProps {
   icon: React.ReactNode;
   label: string;
+  variant?: "glass" | "gradient" | "solid";
 }
 
-export default function PrimaryButton({ icon, label }: PrimaryButtonProps) {
+export default function PrimaryButton({ icon, label, variant = "glass" }: PrimaryButtonProps) {
   const [ripples, setRipples] = useState<{ x: number; y: number; id: number }[]>([]);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -25,7 +26,13 @@ export default function PrimaryButton({ icon, label }: PrimaryButtonProps) {
 
   return (
     <button
-      className="relative flex items-center justify-center gap-3 h-12 px-5 rounded-full backdrop-blur-md bg-white/20 border border-white/20 text-white font-sans font-medium text-base overflow-hidden transition-all duration-200 hover:bg-white/30 hover:backdrop-blur-xl hover:border-white/30"
+      className={`relative flex items-center justify-center gap-3 h-12 px-5 rounded-full text-white font-sans font-medium text-base overflow-hidden transition-all duration-200 ${
+        variant === "glass"
+          ? "backdrop-blur-md bg-white/20 border border-white/20 hover:bg-white/30 hover:backdrop-blur-xl hover:border-white/30"
+          : variant === "gradient"
+          ? "bg-linear-to-b from-primary-700 via-primary-600  to-primary-300 border border-gray-400/80 hover:brightness-110 cursor-pointer"
+          : "bg-primary-600 border border-primary-700 hover:bg-primary-700"
+      }`}
       type="button"
       onClick={handleClick}
       style={{
@@ -41,7 +48,7 @@ export default function PrimaryButton({ icon, label }: PrimaryButtonProps) {
             top: ripple.y,
             width: 10,
             height: 10,
-            backgroundColor: "rgba(255, 255, 255, 0.4)",
+            backgroundColor: variant === "glass" ? "rgba(255, 255, 255, 0.4)" : "rgba(255, 255, 255, 0.6)",
             transform: "translate(-50%, -50%) scale(0)",
             animation: "rippleEffect 0.6s ease-out forwards",
           }}
