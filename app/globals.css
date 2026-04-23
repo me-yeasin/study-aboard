@@ -199,6 +199,23 @@
   --color-neutral-800: var(--slate-800);
   --color-neutral-900: var(--slate-900);
   --color-neutral-950: var(--slate-950);
+
+  /* Marquee Animation */
+  --animate-marquee: marquee 30s linear infinite;
+}
+
+/* Marquee Keyframes - defined outside @theme to always be included */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - var(--marquee-gap, 2rem))); }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee2 {
+    animation: none;
+  }
 }
 
 /* ============================================

@@ -1,6 +1,6 @@
 "use client";
 
-import { Header, HeroSection, ServicesSection, FeaturesSection, AboutUsSection } from "./components/sections";
+import { Header, HeroSection, ServicesSection, FeaturesSection, AboutUsSection, BrandMarquee } from "./components/sections";
 
 export default function Home() {
   return (
@@ -10,6 +10,7 @@ export default function Home() {
       <ServicesSection />
       <FeaturesSection />
       <AboutUsSection />
+      <BrandMarquee />
     </>
   );
 }
