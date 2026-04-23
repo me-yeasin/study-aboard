@@ -11,6 +11,8 @@ interface CardData {
 
 interface CategorySliderProps {
   sectionNumber: string;
+  sectionNumberColor?: string;
+  backdropBlur?: string;
   headerIcon: string;
   title: string;
   subtitle: string;
@@ -21,6 +23,8 @@ interface CategorySliderProps {
 
 export default function CategorySlider({
   sectionNumber,
+  sectionNumberColor = "text-black/60",
+  backdropBlur = "backdrop-blur-md",
   headerIcon,
   title,
   subtitle,
@@ -74,8 +78,8 @@ export default function CategorySlider({
   }, []);
 
   return (
-    <div className="w-full mx-auto p-2 rounded-2xl backdrop-blur-md bg-black/10 border border-black/5">
-      <span className="text-xl font-sans font-medium text-black/60 ml-1">
+    <div className={`w-full mx-auto p-2 rounded-2xl ${backdropBlur} bg-black/10 border border-black/5`}>
+      <span className={`text-xl font-sans font-medium ml-1 ${sectionNumberColor}`}>
         {sectionNumber}
       </span>
       <div className="bg-white rounded-xl px-4 py-6 mt-1">

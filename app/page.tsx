@@ -24,7 +24,7 @@ export default function Home() {
       </header>
 
       <section
-        className="w-full h-dvh bg-[url('/images/hero-background.png')] bg-cover bg-center bg-no-repeat flex flex-col items-center pt-20 px-2"
+        className="relative w-full min-h-dvh bg-[url('/images/hero-background.png')] bg-cover bg-center bg-no-repeat flex flex-col items-center pt-20 px-2 pb-8"
         aria-label="Hero section"
       >
         <div className="flex items-center gap-2 mt-10">
@@ -62,9 +62,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full bg-gray-100 py-20 px-4">
+      <section className="relative -mt-48 z-20 px-4">
+        <div className="flex flex-col gap-4 max-w-md mx-auto">
         <CategorySlider
           sectionNumber="01"
+          sectionNumberColor="text-white/70"
+          backdropBlur="backdrop-blur-2xl"
           headerIcon="/icons/study-icon.png"
           title="Study"
           subtitle="I need help with my study plan"
@@ -97,7 +100,6 @@ export default function Home() {
             },
           ]}
         />
-        <div className="mt-8" />
         <CategorySlider
           sectionNumber="02"
           headerIcon="/icons/study-icon.png"
@@ -132,6 +134,41 @@ export default function Home() {
             },
           ]}
         />
+        <CategorySlider
+          sectionNumber="02"
+          headerIcon="/icons/study-icon.png"
+          title="Work"
+          subtitle="I need help with my work plan"
+          buttonText="View All"
+          onButtonClick={() => console.log("Work View All clicked")}
+          cards={[
+            {
+              icon: "/icons/city-icon.png",
+              prefix: "I am a",
+              keyword: "tourist",
+              suffix: "working holiday visa.",
+            },
+            {
+              icon: "/icons/student-australia-icon.png",
+              prefix: "I am a",
+              keyword: "student",
+              suffix: "in Australia.",
+            },
+            {
+              icon: "/icons/overseas-icon.png",
+              prefix: "I am a",
+              keyword: "student",
+              suffix: "currently overseas.",
+            },
+            {
+              icon: "/icons/high-school-australia-icon.png",
+              prefix: "I am a",
+              keyword: "high school student",
+              suffix: "in Australia.",
+            },
+          ]}
+        />
+        </div>
       </section>
     </>
   );

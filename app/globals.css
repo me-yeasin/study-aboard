@@ -205,12 +205,12 @@
    DARK MODE OVERRIDES
    ============================================ */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0f172a;
     --foreground: #f8fafc;
   }
-}
+} */
 
 /* ============================================
    BASE STYLES
