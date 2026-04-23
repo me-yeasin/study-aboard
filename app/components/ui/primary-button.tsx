@@ -6,9 +6,11 @@ interface PrimaryButtonProps {
   icon: React.ReactNode;
   label: string;
   variant?: "glass" | "gradient" | "solid";
+  fullWidth?: boolean;
+  rounded?: "full" | "lg" | "md" | "sm";
 }
 
-export default function PrimaryButton({ icon, label, variant = "glass" }: PrimaryButtonProps) {
+export default function PrimaryButton({ icon, label, variant = "glass", fullWidth = false, rounded = "full" }: PrimaryButtonProps) {
   const [ripples, setRipples] = useState<{ x: number; y: number; id: number }[]>([]);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -26,7 +28,17 @@ export default function PrimaryButton({ icon, label, variant = "glass" }: Primar
 
   return (
     <button
-      className={`relative flex items-center justify-center gap-3 h-12 px-5 rounded-full text-white font-sans font-medium text-base overflow-hidden transition-all duration-200 ${
+      className={`relative flex items-center justify-center gap-3 h-12 px-5 text-white font-sans font-medium text-base overflow-hidden transition-all duration-200 ${
+        fullWidth ? "w-full" : ""
+      } ${
+        rounded === "full"
+          ? "rounded-full"
+          : rounded === "lg"
+          ? "rounded-lg"
+          : rounded === "md"
+          ? "rounded-md"
+          : "rounded-sm"
+      } ${
         variant === "glass"
           ? "backdrop-blur-md bg-white/20 border border-white/20 hover:bg-white/30 hover:backdrop-blur-xl hover:border-white/30"
           : variant === "gradient"
