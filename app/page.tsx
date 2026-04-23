@@ -62,8 +62,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative -mt-48 z-20 px-4">
-        <div className="flex flex-col gap-4 max-w-md mx-auto">
+      <section className="relative -mt-48 z-20 px-4 overflow-visible">
+        {/* Decorative Background Circles */}
+        <div className="absolute inset-0 overflow-visible pointer-events-none">
+          {/* Circle #1 - Left */}
+          <div className="absolute -left-20 top-0 w-48 h-48 rounded-full bg-primary-500/20 blur-2xl" />
+          {/* Circle #2 - Right */}
+          <div className="absolute right-0 top-40 w-56 h-56 rounded-full bg-primary-500/20 blur-2xl" />
+          {/* Circle #3 - Center */}
+          <div className="absolute left-1/2 -translate-x-1/2 top-80 w-44 h-44 rounded-full bg-primary-500/20 blur-2xl" />
+          {/* Circle #4 - Left (lower) */}
+          <div className="absolute -left-16 top-160 w-52 h-52 rounded-full bg-primary-500/30 blur-2xl" />
+          {/* Circle #5 - Right (lower) */}
+          <div className="absolute right-0 top-220 w-48 h-48 rounded-full bg-primary-500/50 blur-2xl" />
+        </div>
+        <div className="relative z-10 flex flex-col gap-4 max-w-xl mx-auto">
         <CategorySlider
           sectionNumber="01"
           sectionNumberColor="text-white/70"
@@ -162,6 +175,62 @@ export default function Home() {
             },
           ]}
         />
+
+        {/* Feature Benefits Section */}
+        <div className="mt-12 grid grid-cols-2 gap-4">
+          {/* Feature 1 - Expert Education Counselors */}
+          <div className="flex flex-col items-center text-center p-4">
+            <div className="w-14 h-14 rounded-full bg-secondary-100 flex items-center justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-secondary-600">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 12v.01"/>
+              </svg>
+            </div>
+            <h3 className="font-sans text-sm font-semibold text-gray-900 mb-1">Expert Education Counselors</h3>
+            <p className="font-sans text-xs text-gray-500 leading-relaxed">Get personalized advice from certified education consultants.</p>
+          </div>
+
+          {/* Feature 2 - End-to-End Visa Support */}
+          <div className="flex flex-col items-center text-center p-4">
+            <div className="w-14 h-14 rounded-full bg-primary-100 flex items-center justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary-600">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <path d="M9 15l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 className="font-sans text-sm font-semibold text-gray-900 mb-1">End-to-End Visa Support</h3>
+            <p className="font-sans text-xs text-gray-500 leading-relaxed">From paperwork to visa approval, we handle the entire process seamlessly.</p>
+          </div>
+
+          {/* Feature 3 - Partnerships with Top Institutions */}
+          <div className="flex flex-col items-center text-center p-4">
+            <div className="w-14 h-14 rounded-full bg-tertiary-100 flex items-center justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-tertiary-600">
+                <path d="m4 6 8-4 8 4"/>
+                <path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2"/>
+                <path d="M14 22v-4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v4"/>
+                <path d="M18 5v17"/>
+                <path d="M6 5v17"/>
+                <circle cx="12" cy="9" r="2"/>
+              </svg>
+            </div>
+            <h3 className="font-sans text-sm font-semibold text-gray-900 mb-1">Partnerships with Top Institutions</h3>
+            <p className="font-sans text-xs text-gray-500 leading-relaxed">We're Proudly connected with leading Australian universities and College.</p>
+          </div>
+
+          {/* Feature 4 - Lifetime Assistance */}
+          <div className="flex flex-col items-center text-center p-4">
+            <div className="w-14 h-14 rounded-full bg-accent-100 flex items-center justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent-600">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              </svg>
+            </div>
+            <h3 className="font-sans text-sm font-semibold text-gray-900 mb-1">Lifetime Assistance</h3>
+            <p className="font-sans text-xs text-gray-500 leading-relaxed">Our support doesn't end after enrollment. We continue to guide you.</p>
+          </div>
+        </div>
         </div>
       </section>
     </>

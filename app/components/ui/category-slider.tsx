@@ -115,7 +115,7 @@ export default function CategorySlider({
               data-index={index}
               className="slider-card shrink-0 w-[calc(100%-2rem)] snap-start"
             >
-              <div className="bg-primary-50 rounded-xl h-40 w-full p-4 flex items-center justify-between">
+              <div className="bg-primary-100 rounded-xl h-40 w-full p-4 flex items-center justify-between">
                 <div className="flex flex-col gap-1 font-sans text-base">
                   <span className="text-gray-500 italic text-xs">
                     {card.prefix}
