@@ -210,10 +210,64 @@
   to { transform: translateX(calc(-100% - var(--marquee-gap, 2rem))); }
 }
 
+/* ============================================
+   OUR PROCESS — ANIMATED BEAM KEYFRAMES
+   Total loop: 4s
+   Phase A (0%→30%):  beam travels connector 1 (Step1→Step2)
+   Phase B (37%→67%): beam travels connector 2 (Step2→Step3)
+   Remainder: pause / invisible reset before next loop
+   ============================================ */
+
+/* Beam particle for connector 1 (Step 1 → Step 2) */
+@keyframes beam1Travel {
+  0%         { transform: translateY(-150%); opacity: 0; }
+  5%         { opacity: 1; }
+  25%        { opacity: 1; }
+  30%        { transform: translateY(250%); opacity: 0; }
+  31%, 100%  { transform: translateY(-150%); opacity: 0; }
+}
+
+/* Beam particle for connector 2 (Step 2 → Step 3) */
+@keyframes beam2Travel {
+  0%, 36%    { transform: translateY(-150%); opacity: 0; }
+  41%        { opacity: 1; }
+  62%        { opacity: 1; }
+  67%        { transform: translateY(250%); opacity: 0; }
+  68%, 100%  { transform: translateY(-150%); opacity: 0; }
+}
+
+/* Icon pulse — Step 1 fires at 0% */
+@keyframes iconPulse1 {
+  0%         { box-shadow: 0 0 0 0px rgba(124, 92, 255, 0.5); transform: scale(1.06); }
+  10%        { box-shadow: 0 0 0 10px rgba(124, 92, 255, 0.12); transform: scale(1); }
+  20%, 100%  { box-shadow: 0 0 0 0px rgba(124, 92, 255, 0); transform: scale(1); }
+}
+
+/* Icon pulse — Step 2 fires at ~37% (≈1.5s into 4s loop) */
+@keyframes iconPulse2 {
+  0%, 35%    { box-shadow: none; transform: scale(1); }
+  37%        { box-shadow: 0 0 0 0px rgba(124, 92, 255, 0.5); transform: scale(1.06); }
+  47%        { box-shadow: 0 0 0 10px rgba(124, 92, 255, 0.12); transform: scale(1); }
+  57%, 100%  { box-shadow: 0 0 0 0px rgba(124, 92, 255, 0); transform: scale(1); }
+}
+
+/* Icon pulse — Step 3 fires at ~74% (≈3s into 4s loop) */
+@keyframes iconPulse3 {
+  0%, 72%    { box-shadow: none; transform: scale(1); }
+  74%        { box-shadow: 0 0 0 0px rgba(124, 92, 255, 0.5); transform: scale(1.06); }
+  84%        { box-shadow: 0 0 0 10px rgba(124, 92, 255, 0.12); transform: scale(1); }
+  94%, 100%  { box-shadow: 0 0 0 0px rgba(124, 92, 255, 0); transform: scale(1); }
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee,
-  .animate-marquee2 {
+  .animate-marquee2,
+  .animate-beam1,
+  .animate-beam2,
+  .animate-icon-pulse1,
+  .animate-icon-pulse2,
+  .animate-icon-pulse3 {
     animation: none;
   }
 }

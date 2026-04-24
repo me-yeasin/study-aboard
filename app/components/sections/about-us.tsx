@@ -2,6 +2,7 @@
 
 import PrimaryButton from "../ui/primary-button";
 import { PhoneIcon } from "../ui/icons";
+import { LuCheck } from "react-icons/lu";
 
 export default function AboutUsSection() {
   return (
@@ -36,33 +37,25 @@ export default function AboutUsSection() {
         <div className="grid grid-cols-2 gap-4 mt-6">
           <div className="flex items-start gap-2">
             <div className="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center shrink-0 mt-0.5">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-primary-600">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
+              <LuCheck size={12} className="text-primary-600" strokeWidth={3} />
             </div>
             <span className="font-sans text-xs text-gray-700">Trusted Guidance Since 1988</span>
           </div>
           <div className="flex items-start gap-2">
             <div className="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center shrink-0 mt-0.5">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-primary-600">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
+              <LuCheck size={12} className="text-primary-600" strokeWidth={3} />
             </div>
             <span className="font-sans text-xs text-gray-700">Partnered with Leading Institutions</span>
           </div>
           <div className="flex items-start gap-2">
             <div className="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center shrink-0 mt-0.5">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-primary-600">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
+              <LuCheck size={12} className="text-primary-600" strokeWidth={3} />
             </div>
             <span className="font-sans text-xs text-gray-700">Comprehensive Support Services</span>
           </div>
           <div className="flex items-start gap-2">
             <div className="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center shrink-0 mt-0.5">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-primary-600">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
+              <LuCheck size={12} className="text-primary-600" strokeWidth={3} />
             </div>
             <span className="font-sans text-xs text-gray-700">Global Presence, Local Expertise</span>
           </div>
