@@ -202,12 +202,24 @@
 
   /* Marquee Animation */
   --animate-marquee: marquee 30s linear infinite;
+  --animate-testimonial-marquee: testimonial-marquee 40s linear infinite;
+  --animate-testimonial-marquee-reverse: testimonial-marquee-reverse 40s linear infinite;
 }
 
 /* Marquee Keyframes - defined outside @theme to always be included */
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(calc(-100% - var(--marquee-gap, 2rem))); }
+}
+
+@keyframes testimonial-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes testimonial-marquee-reverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 
 /* ============================================
@@ -383,4 +395,32 @@ body {
 
 .scrollbar-hide::-webkit-scrollbar-thumb {
   display: none !important;
+}
+
+/* ============================================
+   TESTIMONIAL MARQUEE ANIMATION
+   Duplicated cards approach: scroll -50% for seamless loop
+   ============================================ */
+
+.animate-testimonial-marquee {
+  animation: testimonial-marquee 40s linear infinite;
+}
+
+.animate-testimonial-marquee-reverse {
+  animation: testimonial-marquee-reverse 40s linear infinite;
+}
+
+.animate-testimonial-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-testimonial-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-testimonial-marquee,
+  .animate-testimonial-marquee-reverse {
+    animation: none;
+  }
 }
