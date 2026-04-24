@@ -1,4 +1,4 @@
-import { BsTelephoneFill, BsCalendarCheckFill } from "react-icons/bs";
+import { BsTelephone, BsTelephoneFill, BsCalendarCheckFill } from "react-icons/bs";
 import {
   LuBrainCircuit,
   LuFileBadge2,
@@ -6,7 +6,7 @@ import {
   LuHeartHandshake,
 } from "react-icons/lu";
 
-const PhoneIcon = () => <BsTelephoneFill size={18} color="white" />;
+const PhoneIcon = ({ color = "white", size = 18 }: { color?: string; size?: number }) => <BsTelephone size={size} color={color} />;
 
 const CalendarIcon = () => <BsCalendarCheckFill size={16} color="white" />;
 

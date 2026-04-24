@@ -10,3 +10,4 @@ export { default as TestimonialsSection } from "./testimonials";
 export { default as OurBlocksSection } from "./our-blocks";
 export { default as FaqSection } from "./faq";
 export { default as CtaSection } from "./cta-section";
+export { default as Footer } from "./footer";
