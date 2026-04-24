@@ -2,6 +2,15 @@
 
 import PrimaryButton from "./primary-button";
 
+interface CourseCardProps {
+  image: string;
+  isPopular?: boolean;
+  location: string;
+  duration: string;
+  title: string;
+  onViewCourse?: () => void;
+}
+
 const LocationIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
@@ -23,20 +32,29 @@ const ArrowRightIcon = () => (
   </svg>
 );
 
-export default function CourseCard() {
+export default function CourseCard({
+  image,
+  isPopular = false,
+  location,
+  duration,
+  title,
+  onViewCourse,
+}: CourseCardProps) {
   return (
     <div className="bg-white rounded-2xl shadow-sm overflow-hidden mt-8">
       {/* Image Section */}
       <div className="relative">
         <img
-          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-          alt="Hospitality & Tourism Management"
+          src={image}
+          alt={title}
           className="w-full h-48 object-cover"
         />
         {/* Popular Course Tag */}
-        <span className="absolute top-3 left-3 bg-primary-100 text-primary-800 text-xs font-medium px-3 py-1.5 rounded-full">
-          Popular Course
-        </span>
+        {isPopular && (
+          <span className="absolute top-3 left-3 bg-primary-100 text-primary-800 text-xs font-medium px-3 py-1.5 rounded-full">
+            Popular Course
+          </span>
+        )}
       </div>
 
       {/* Content Section */}
@@ -45,17 +63,17 @@ export default function CourseCard() {
         <div className="flex items-center gap-4 mb-3">
           <div className="flex items-center gap-1.5 text-gray-500">
             <LocationIcon />
-            <span className="text-xs">Perth City</span>
+            <span className="text-xs">{location}</span>
           </div>
           <div className="flex items-center gap-1.5 text-gray-500">
             <ClockIcon />
-            <span className="text-xs">104 Weeks</span>
+            <span className="text-xs">{duration}</span>
           </div>
         </div>
 
         {/* Course Title */}
         <h3 className="font-sans text-base font-semibold text-gray-900 mb-4 leading-snug text-left">
-          Hospitality & Tourism Management
+          {title}
         </h3>
 
         {/* CTA Button */}
@@ -65,6 +83,7 @@ export default function CourseCard() {
           variant="gradient"
           fullWidth={true}
           rounded="md"
+          onClick={onViewCourse}
         />
       </div>
     </div>

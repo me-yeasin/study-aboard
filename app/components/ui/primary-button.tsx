@@ -8,9 +8,10 @@ interface PrimaryButtonProps {
   variant?: "glass" | "gradient" | "solid";
   fullWidth?: boolean;
   rounded?: "full" | "lg" | "md" | "sm";
+  onClick?: () => void;
 }
 
-export default function PrimaryButton({ icon, label, variant = "glass", fullWidth = false, rounded = "full" }: PrimaryButtonProps) {
+export default function PrimaryButton({ icon, label, variant = "glass", fullWidth = false, rounded = "full", onClick }: PrimaryButtonProps) {
   const [ripples, setRipples] = useState<{ x: number; y: number; id: number }[]>([]);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -46,7 +47,10 @@ export default function PrimaryButton({ icon, label, variant = "glass", fullWidt
           : "bg-primary-600 border border-primary-700 hover:bg-primary-700"
       }`}
       type="button"
-      onClick={handleClick}
+      onClick={(e) => {
+        handleClick(e);
+        onClick?.();
+      }}
       style={{
         WebkitTapHighlightColor: "transparent",
       }}
