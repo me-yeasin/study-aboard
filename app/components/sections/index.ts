@@ -7,3 +7,4 @@ export { default as CoursesSection } from "./courses";
 export { default as BrandMarquee } from "./brand-marquee";
 export { default as OurProcessSection } from "./our-process";
 export { default as TestimonialsSection } from "./testimonials";
+export { default as OurBlocksSection } from "./our-blocks";
