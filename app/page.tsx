@@ -1,6 +1,6 @@
 "use client";
 
-import { Header, HeroSection, ServicesSection, FeaturesSection, AboutUsSection, CoursesSection, BrandMarquee, OurProcessSection, TestimonialsSection, OurBlocksSection } from "./components/sections";
+import { Header, HeroSection, ServicesSection, FeaturesSection, AboutUsSection, CoursesSection, BrandMarquee, OurProcessSection, TestimonialsSection, OurBlocksSection, FaqSection } from "./components/sections";
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
       <OurProcessSection />
       <TestimonialsSection />
       <OurBlocksSection />
+      <FaqSection />
     </>
   );
 }
